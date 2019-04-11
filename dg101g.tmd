@@ -594,6 +594,13 @@
                 <[string8][Body][Fuselage]>
                 <[tmvector3d][R0][ 1.265 -0.035 -0.08 ]>
             >
+            <[heading_indicator][HeadingIndicator][]
+                <[string8][Body][Fuselage]>
+            >
+            <[sender][SenderMagneticHeading][]
+                <[string8][Input][HeadingIndicator.MagneticHeading]>
+                <[string8][Message][Aircraft.MagneticHeading]>
+            >			
             <[balance_indicator][BalanceIndicator][]
                 <[string8][Body][Fuselage]>
                 <[tmvector3d][R0][1.244 -0.035 -0.1640 ]>
@@ -819,17 +826,37 @@
                 <[float64][Clz][ 1.5 ]>
                 <[float64][Cm][ 0.0 ]>
             >
-            <[yawstring][YawString][]
+            <[indicator_string][IndicatorString][]
                 <[string8][Body][Fuselage]>
-                <[tmvector3d][R0][ 1.260 0.0  0.235 ]>
-                <[tmvector3d][X0][ 0.985 0.0 -0.174 ]>
-                <[tmvector3d][Y0][ 0.0 1.0  0.0 ]>
-                <[tmvector3d][Z0][ 0.174 0.0  0.985 ]>
-                <[float64][Cdx][ 0.05 ]>
-                <[float64][Cdy][ 1.0 ]>
-                <[float64][Cdz][ 1.0 ]>
-                <[float64][Cly][ 1.5 ]>
-                <[float64][Clz][ 1.5 ]>
+                <[tmvector3d][R0][1.259 0.0 0.2371]> 
+                <[tmvector3d][X0][ 0.2371 0.0  0.978 ]>
+                <[tmvector3d][Direction][ -0.978 0.0 0.2371 ]>
+                <[tmvector3d][Normal][ 0.2371 0.0  0.978 ]>
+                <[float64][Length][0.18]>
+            >
+            <[output_vec3][IndicatorString1][]
+                <[string8][Input][IndicatorString.Output1]>
+            >
+            <[output_vec3][IndicatorString2][]
+                <[string8][Input][IndicatorString.Output2]>
+            >
+            <[output_vec3][IndicatorString3][]
+                <[string8][Input][IndicatorString.Output3]>
+            >
+            <[output_vec3][IndicatorString4][]
+                <[string8][Input][IndicatorString.Output4]>
+            >
+            <[output_vec3][IndicatorString5][]
+                <[string8][Input][IndicatorString.Output5]>
+            >
+            <[output_vec3][IndicatorString6][]
+                <[string8][Input][IndicatorString.Output6]>
+            >
+            <[output_vec3][IndicatorString7][]
+                <[string8][Input][IndicatorString.Output7]>
+            >
+            <[output_vec3][IndicatorString8][]
+                <[string8][Input][IndicatorString.Output8]>
             >
         >
         <[pointer_list_tmgraphics][GraphicObjects][]
@@ -1336,16 +1363,25 @@
             // select [ led-green ] //  instrumentation/comm/volume >0.5
             // select [ led-yellow ] // instrumentation/comm/volume < 0.50 instrumentation/comm/volume >0.01
             // select [ led-off ] // instrumentation/comm/volume < 0.01
-
-            <[graphics_yawstring][YawString][]
+			
+            <[graphics_string][YawString][]
                 <[string8][GeometryList][ faden ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][DirectionID][YawString.Direction]>
-                <[tmvector3d][R0][ 1.259 0.0 0.237100 ]>
-                <[tmvector3d][X0][ 0.978 0.0 -0.208 ]>
-                <[tmvector3d][Z0][ 0.208 0.0 0.978 ]>
-            >
+                <[uint32][Position1ID][IndicatorString1.Output]>
+                <[uint32][Position2ID][IndicatorString2.Output]>
+                <[uint32][Position3ID][IndicatorString3.Output]>
+                <[uint32][Position4ID][IndicatorString4.Output]>
+                <[uint32][Position5ID][IndicatorString5.Output]>
+                <[uint32][Position6ID][IndicatorString6.Output]>
+                <[uint32][Position7ID][IndicatorString7.Output]>
+                <[uint32][Position8ID][IndicatorString8.Output]>
+                <[tmvector3d][R0][1.259 0.0 0.2371]> 
+                <[tmvector3d][X0][-0.978 0.0 0.2371 ]>
+                <[tmvector3d][Y0][ 0.0 -1.0 0.0 ]>
+                <[tmvector3d][Z0][ 0.2371 0.0  0.978 ]>
+                <[float64][Length][0.18]>
+            >			
         >
         <[pointer_list_tmsound][SoundObjects][]
             <[soundinput][Airspeed][]
