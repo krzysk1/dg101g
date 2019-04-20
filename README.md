@@ -29,3 +29,4 @@ To do list (optional in parentheses):
 - (radio animation);
 - (canopy animation);
 - (head animation).
+controls.tmc settings

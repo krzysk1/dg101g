@@ -208,6 +208,12 @@
                 <[string8][InputBrake][ServoBrake.Output]>
                 <[float64][BrakeStrength][0.4]>
             >
+            <[output][GroundRollSpeed][]
+                <[string8][Input][MainWheelHull.Speed]>
+            >
+            <[output][GroundRollLoad][]
+                <[string8][Input][MainWheelHull.Load]>
+            >			
             <[wheel][TailWheelHull][]
                 <[float64][K][40000.0]>
                 <[float64][D][200.0]>
@@ -259,14 +265,17 @@
             <[input_default][HookInput][]
                 <[string8][Input][Controls.HookRelease]>
             >
-            <[input_default][AirBrakeInput][]
+            <[input_lever][AirBrakeInput][]
                 <[string8][Input][Controls.GliderAirBrake]>
+                <[tmvector2d][Range][ 0.0 1.0 ]>
+                <[uint][Positions][201]>
+                <[float64][Speed][0.2]>
             >
             <[sender][SenderAirBrakePosition][]
                 <[string8][Input][AirBrakeInput.Output]>
                 <[string8][Message][Aircraft.AirBrake]>
             >
-            <[input_default][AileronInput][]
+            <[input_control][AileronInput][]
                 <[tmvector2d][Range][ -1.0 1.0 ]>
                 <[string8][Input][Controls.Roll.Input]>
             >
@@ -274,7 +283,7 @@
                 <[string8][Input][AileronInput.Output]>
                 <[string8][Message][Aircraft.Aileron]>
             >
-            <[input_default][ElevatorInput][]
+            <[input_control][ElevatorInput][]
                 <[tmvector2d][Range][ -1.0 1.0 ]>
                 <[string8][Input][Controls.Pitch.Input]>
             >
@@ -632,12 +641,7 @@
             <[output][RateOfTurn][]
                 <[string8][Input][TurnCoordinator.RateOfTurn]>
             >
-            <[output][GroundRollSpeed][]
-                <[string8][Input][MainWheelHull.Speed]>
-            >
-            <[output][GroundRollLoad][]
-                <[string8][Input][MainWheelHull.Load]>
-            >
+
             <[output][HookInputOutput][]
                 <[string8][Input][HookInput.Output]>
             >
@@ -729,9 +733,9 @@
                 <[float64][StationLE][ 0.284   0.284  0.284  0.284 ]>
                 <[float64][StationTE][ -0.6527 -0.466 -0.146  -0.091 ]>
                 <[float64][StationZ][ 0.0657  0.2855 0.4216  0.4373 ]>
-                <[float64][StationIncidence][ -0.0    -0.0   -0.0   -0.0 ]>
-                <[uint32][StationFlap][ 0         8      1         0 ]>
-                <[float64][StationFlapFraction][ 0.0       0.0    0.4       0.0 ]>
+                <[float64][StationIncidence][ 0.0 0.0 0.0 0.0 ]>
+                <[uint32][StationFlap][ 0 8 1 0 ]>
+                <[float64][StationFlapFraction][ 0.0 0.0 0.4 0.0 ]>
                 <[float64][AspectRatioMultiplier][2.0]>
                 <[string8][AirfoilRoot][AirfoilRoot]>
                 <[string8][AirfoilTip][AirfoilTip]>
@@ -748,9 +752,9 @@
                 <[float64][StationLE][ 0.284   0.284  0.284  0.284 ]>
                 <[float64][StationTE][ -0.091  -0.146 -0.466  -0.6527 ]>
                 <[float64][StationZ][ 0.4373   0.4216 0.2855 0.0657 ]>
-                <[float64][StationIncidence][ -0.0    -0.0    -0.0    -0.0 ]>
-                <[uint32][StationFlap][ 0   1   8   0 ]>
-                <[float64][StationFlapFraction][ 0.0 0.4  0.0  0.0 ]>
+                <[float64][StationIncidence][ 0.0 0.0 0.0 0.0 ]>
+                <[uint32][StationFlap][ 0 1 8 0 ]>
+                <[float64][StationFlapFraction][ 0.0 0.4 0.0 0.0 ]>
                 <[float64][AspectRatioMultiplier][2.0]>
                 <[string8][AirfoilRoot][AirfoilRoot]>
                 <[string8][AirfoilTip][AirfoilTip]>
@@ -1400,7 +1404,7 @@
                 <[string8][InputPitch][GliderPitch.Output]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][VelocityID][Fuselage.V]>
-                <[string8][SoundFile][glider.wav]>
+                <[string8][SoundFile][wind.wav]>
             >
             <[soundinput][GearPosition][]
                 <[uint32][InputID][GearSequence.Output]>
@@ -1448,7 +1452,7 @@
                 <[string8][InputPitch][1.0]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][VelocityID][Fuselage.V]>
-                <[string8][SoundFile][glider_airbrake_out.wav]>
+                <[string8][SoundFile][airbrake2.wav]>
                 <[float64][Threshold][0.01]>
                 <[uint32][Direction][1]>
                 <[bool][External][false]>
@@ -1541,25 +1545,7 @@
                 <[string8][InputPitch][GroundRollPitch.Output]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][VelocityID][Fuselage.V]>
-                <[string8][SoundFile][ground_roll2.wav]>
-            >
-            <[soundinput][Acceleration][]
-                <[uint32][InputID][AccelerometerNeedle.Output]>
-            >
-            <[soundmapping][AccelerationMapping][]
-                <[string8][Input][Acceleration.Output]>
-                <[tmvector2d][Map][(-100.0 1.5) (0.0 0.0) (100.0 1.5)]>
-            >
-            <[soundmultiply][HighVolume][]
-                <[string8][Input0][AccelerationMapping.Output]>
-                <[string8][Input1][GliderVolume.Output]>
-            >
-            <[soundloop][HighVolumeLoop][]
-                <[string8][InputVolume][HighVolume.Output]>
-                <[string8][InputPitch][1.0]>
-                <[uint32][PositionID][Fuselage.R]>
-                <[uint32][VelocityID][Fuselage.V]>
-                <[string8][SoundFile][glider_high_g.wav]>
+                <[string8][SoundFile][ground_roll.wav]>
             >
         >
     >

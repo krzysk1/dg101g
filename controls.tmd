@@ -1,6 +1,195 @@
 <[file][][]
     <[modelmanager][][]
         <[pointer_list_tmcontrol][ControlObjects][]
+		
+			//COM1 volume		
+            <[control_cylinder][COM1Volume][0]
+                <[string8][Type][knob]>
+                <[vector3_float64][R0][ 1.234 0.056 -0.162 ]>
+                <[matrix3_float64][B0][ 1.0 0.0 0.0  0.0 1.0 0.0  0.0 0.0 1.0 ]>
+                <[vector3_float64][Direction][ 1.0 0.0 0.0 ]>
+                <[float64][StepAngle][0.1]>
+                <[control_message][OnRotate][]
+                    <[string8][Message][Communication.COM1Volume]>
+                    <[string8][Qualifiers][step]>
+                    <[float64][Value][1.0]>
+                >
+                <[float64][Radius][0.006]>
+                <[float64][Length][0.012]>
+            >			
+
+			//barometer_setting 
+            <[control_cylinder][PressureSetting][3]
+                <[string8][Type][knob]>
+                <[vector3_float64][R0][1.1235 0.033 -0.028]>
+                <[matrix3_float64][B0][ 1.0 0.0 0.0  0.0 1.0 0.0  0.0 0.0 1.0 ]>
+                <[vector3_float64][Direction][ 1.0 0.0 0.0 ]>
+                <[float64][StepAngle][0.1]>
+                <[control_message][OnRotate][]
+                    <[string8][Message][PressureSetting]>
+                    <[string8][Qualifiers][step]>
+                    <[float64][Value][1.0]>
+                >
+                <[float64][Radius][0.004]>
+                <[float64][Length][0.01]>
+            >
+			// Maccready ring 
+            <[control_cylinder][MacCreadyRing][4]
+                <[string8][Type][knob]>
+                <[vector3_float64][R0][1.237 -0.09 0.005]>
+                <[matrix3_float64][B0][ 1.0 0.0 0.0  0.0 1.0 0.0  0.0 0.0 1.0 ]>
+                <[vector3_float64][Direction][ 1.0 0.0 0.0 ]>
+                <[float64][StepAngle][0.01]>
+                <[control_message][OnRotate][]
+                    <[string8][Message][MaccreadySetting]>
+                    <[string8][Qualifiers][step]>
+                    <[float64][Value][1.0]>
+                >
+                <[float64][Radius][0.043]>
+                <[float64][Length][0.03]>
+            >			
+            // stick
+            <[control_input][ElevatorTravel][]
+                <[uint32][InputID][ServoElevator.Output]>
+                <[float64][Scaling][0.666]>
+            >
+            <[control_input][AileronTravel][]
+                <[uint32][InputID][ServoStickAileron.Output]>
+                <[float64][Scaling][0.349066]>
+            >
+            <[control_rotation][ElevatorTransform][]
+                <[string8][Input][ElevatorTravel.Output]>
+                <[tmvector3d][Axis][0.0 -1.0 0.0]>
+                <[tmvector3d][Pivot][1.08 0.0 -0.34]>
+            >
+            <[control_rotation][StickTransform][]
+                <[string8][Input][AileronTravel.Output]>
+                <[tmvector3d][Axis][-1.0 0.0 0.0]>
+                <[tmvector3d][Pivot][1.08 0.0 -0.34]>
+                <[string8][InputTransform][ElevatorTransform.Output]>
+            >
+            <[control_cylinder][StickGrip][114]
+                <[string8][Type][stick]>
+                <[vector3_float64][R0][ 0.9883 0.0 -0.1983 ]>
+                <[matrix3_float64][B0][ 0.0  0.0  1.0  0.0  1.0  0.0 -1.0  0.0 0.0 ]>
+                <[vector3_float64][Direction][ 1.0  0.0 0.0 ]>
+                <[vector3_float64][Direction2][ 0.0 -1.0 0.0 ]>
+                <[float64][StepDistance][0.0005]>
+                <[string8][InputTransform][StickTransform.Output]>
+                <[control_message][OnStep][]
+                    <[string8][Message][Controls.Pitch.Input]>
+                    <[string8][Qualifiers][step]>
+                    <[float64][Value][0.004]>
+                >
+                <[control_message][OnRotate][]
+                    <[string8][Message][Controls.Roll.Input]>
+                    <[string8][Qualifiers][step]>
+                    <[float64][Value][4.0]>
+                >
+                <[float64][Radius][0.018]>
+                <[float64][Length][0.01]>
+            >			
+			// airbrake
+            <[control_input][AirBrakeHandleTravel][2]
+                <[uint32][InputID][ServoAirBrakePhysical.Output]>
+                <[float64][Scaling][0.07]>			
+            >
+            <[control_rotation][AirBrakeHandleTranslation][2]
+                <[string8][Input][AirBrakeHandleTravel.Output]>
+                <[tmvector3d][Axis][0.0 1.0 0.0]>
+                <[tmvector3d][Pivot][1.804484 0.234871 -0.058508]>
+            >			
+            <[control_cylinder][AirbrakeHandle][2]
+                <[string8][Type][lever]>
+                <[vector3_float64][R0][1.137 0.2172 -0.1091]>
+                <[tmmatrix3d][B0][ -0.996195 0.009110 0.086678  0.0 0.994522 -0.104528  0.087156 0.104131 0.990737 ]>
+                <[vector3_float64][Direction][ -1.0 0.0 0.0 ]>
+                <[float64][StepDistance][0.00002]>
+                <[string8][InputTransform][AirBrakeHandleTranslation.Output]>
+                <[control_message][OnStep][]
+                    <[string8][Message][Controls.GliderAirBrake]>
+                    <[string8][Qualifiers][step]>
+                    <[float64][Value][0.02]>
+                >
+                <[float64][Radius][0.03]>
+                <[float64][Length][0.12]>
+            >
+            <[control_cylinder][AirBrakeHandleBase][2]
+                <[string8][Type][lever base]>
+                <[vector3_float64][R0][1.137 0.2172 -0.1091]>
+                <[tmmatrix3d][B0][ 0.991942 -0.034639 -0.121869  0.034899 0.999391 0.0  0.121795 -0.004253 0.992546 ]>
+                <[vector3_float64][Direction][ -1.0 0.0 0.0 ]>
+                <[float64][StepDistance][0.00002]>
+                <[control_message][OnStep][]
+                    <[string8][Message][Controls.GliderAirBrake]>
+                    <[string8][Qualifiers][step]>
+                    <[float64][Value][0.02]>
+                >
+                <[float64][Radius][0.03]>
+                <[float64][Length][0.12]>
+            >
+			// hook release
+            <[control_box][HookReleaseControl][11]
+                <[string8][Type][lever]>
+                <[vector3_float64][R0][ 1.178 0.0668 -0.2494 ]>
+                <[matrix3_float64][B0][ 1.0 0.0 0.0  0.0 1.0 0.0  0.0 0.0 1.0 ]>
+                <[vector3_float64][Direction][ 1.0 0.0 0.0 ]>
+                <[float64][StepDistance][0.01]>
+                <[control_message][OnStep][]
+                    <[string8][Message][Controls.HookRelease]>
+                    <[string8][Qualifiers][step]>
+                    <[float64][Value][-1.0]>
+                >
+                <[vector3_float64][Dimensions][0.05 0.05 0.05]>
+            >
+			// trimer
+            <[control_input][TrimSliderTravel][2]
+                <[uint32][InputID][ServoElevatorTrim.Output]>
+                <[string8][Scaling][-0.12]>
+            >
+            <[control_translation][TrimSliderTranslation][2]
+                <[string8][Input][TrimSliderTravel.Output]>
+                <[tmvector3d][Axis][0.995037 -0.099504 0.0 ]>
+            >			
+            <[control_box][TrimSlider][2]
+                <[string8][Type][lever]>
+                <[vector3_float64][R0][1.056 0.2528 -0.222]>
+                <[matrix3_float64][B0][ 0.0  0.0  1.0  0.0  1.0  0.0 -1.0  0.0 0.0 ]>
+                <[vector3_float64][Direction][ -0.995037 0.099504 0.0 ]>
+                <[float64][StepDistance][0.001]>
+                <[string8][InputTransform][TrimSliderTranslation.Output]>
+                <[control_message][OnStep][]
+                    <[string8][Message][Controls.Trim]>
+                    <[string8][Qualifiers][step]>
+                    <[float64][Value][1.0]>
+                >
+                <[vector3_float64][Dimensions][0.006 0.02 0.013]>
+            >
+			
+			// gear
+            <[control_input][GearLeverTravel][2]
+                <[uint32][InputID][ServoGearAirbrake.Output]>
+                <[string8][Scaling][-0.2]>
+            >
+            <[control_translation][GearLeverTranslation][2]
+                <[string8][Input][GearLeverTravel.Output]>
+                <[tmvector3d][Axis][0.995037 -0.099504 0.0]>
+            >		
+            <[control_cylinder][GearLever][2]
+                <[string8][Type][lever]>
+                <[vector3_float64][R0][1.1155 0.2183 -0.225]>
+                <[matrix3_float64][B0][ 0.0  0.0  1.0  0.0  1.0  0.0 -1.0  0.0 0.0 ]>
+                <[vector3_float64][Direction][ -0.995037 0.099504 0.0  ]>
+                <[float64][StepDistance][0.001]>
+                <[string8][InputTransform][GearLeverTranslation.Output]>
+                <[control_message][OnStep][]
+                    <[string8][Message][Controls.Gear]>
+                    <[string8][Qualifiers][step]>
+                    <[float64][Value][1.0]>
+                >
+                <[float64][Radius][0.02]>
+                <[float64][Length][0.01]>
+            >		
         >
     >
 >
