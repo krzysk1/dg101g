@@ -21,7 +21,7 @@
 			//barometer_setting 
             <[control_cylinder][PressureSetting][3]
                 <[string8][Type][knob]>
-                <[vector3_float64][R0][1.1235 0.033 -0.028]>
+                <[vector3_float64][R0][1.235 0.033 -0.028]>
                 <[matrix3_float64][B0][ 1.0 0.0 0.0  0.0 1.0 0.0  0.0 0.0 1.0 ]>
                 <[vector3_float64][Direction][ 1.0 0.0 0.0 ]>
                 <[float64][StepAngle][0.1]>
@@ -177,7 +177,7 @@
             >		
             <[control_cylinder][GearLever][2]
                 <[string8][Type][lever]>
-                <[vector3_float64][R0][1.1155 0.2183 -0.225]>
+                <[vector3_float64][R0][1.155 0.2183 -0.225]>
                 <[matrix3_float64][B0][ 0.0  0.0  1.0  0.0  1.0  0.0 -1.0  0.0 0.0 ]>
                 <[vector3_float64][Direction][ -0.995037 0.099504 0.0  ]>
                 <[float64][StepDistance][0.001]>
@@ -189,6 +189,32 @@
                 >
                 <[float64][Radius][0.02]>
                 <[float64][Length][0.01]>
+            >
+			
+			// ballast valve
+            <[control_input][BallastValveTravel][2]
+                <[uint32][InputID][ServoCheck.Output]>
+                <[float64][Scaling][1.570796]>			
+            >
+            <[control_rotation][BallastValveTranslation][2]
+                <[string8][Input][BallastValveTravel.Output]>
+                <[tmvector3d][Axis][0.0 0.0 -1.0 ]>
+                <[tmvector3d][Pivot][1.019 -0.252 -0.16]>
+            >			
+            <[control_cylinder][BallastValveHandle][2]
+                <[string8][Type][lever]>
+                <[vector3_float64][R0][1.054 -0.2514 -0.1603]>
+                <[matrix3_float64][B0][ 1.0 0.0 0.0  0.0 1.0 0.0  0.0 0.0 1.0 ]>
+                <[vector3_float64][Direction][ -1.0 0.0 0.0 ]>
+                <[float64][StepDistance][0.00002]>
+                <[string8][InputTransform][BallastValveTranslation.Output]>
+                <[control_message][OnStep][]
+                    <[string8][Message][Controls.BallastValve]>
+                    <[string8][Qualifiers][step]>
+                    <[float64][Value][0.02]>
+                >
+                <[float64][Radius][0.01]>
+                <[float64][Length][0.051]>
             >		
         >
     >
