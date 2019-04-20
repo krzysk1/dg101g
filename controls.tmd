@@ -87,7 +87,7 @@
                     <[float64][Value][4.0]>
                 >
                 <[float64][Radius][0.018]>
-                <[float64][Length][0.01]>
+                <[float64][Length][0.1]>
             >			
 			// airbrake
             <[control_input][AirBrakeHandleTravel][2]
