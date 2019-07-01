@@ -460,8 +460,6 @@
                 <[float64][Speed][13.0]>
                 <[float64][P0][0.0]>
                 <[float64][P1][1.0]>
-                <[float64][P2][0.0]>
-                <[float64][P3][0.0]>
             >
             <[output_free][ServoStickAileronOutput][]
                 <[string8][Input][ServoStickAileron.Output]>
@@ -471,8 +469,6 @@
                 <[float64][Speed][13.0]>
                 <[float64][P0][0.0]>
                 <[float64][P1][0.4]>
-                <[float64][P2][0.0]>
-                <[float64][P3][0.0]>
             >
             <[output_free][ServoLeftAileronOutput][]
                 <[string8][Input][ServoLeftAileron.Output]>
@@ -482,8 +478,6 @@
                 <[float64][Speed][13.0]>
                 <[float64][P0][0.0]>
                 <[float64][P1][-0.4]>
-                <[float64][P2][0.0]>
-                <[float64][P3][0.0]>
             >
             <[output_free][ServoRightAileronOutput][]
                 <[string8][Input][ServoRightAileron.Output]>
@@ -504,8 +498,6 @@
                 <[float64][Speed][1.0]>
                 <[float64][P0][0.0]>
                 <[float64][P1][0.75]>
-                <[float64][P2][0.0]>
-                <[float64][P3][0.0]>
             >
             <[output_free][ServoElevatorTrimOutput][]
                 <[string8][Input][ServoElevatorTrim.Output]>
@@ -515,8 +507,6 @@
                 <[float64][Speed][13.0]>
                 <[float64][P0][0.0]>
                 <[float64][P1][-0.523599]>
-                <[float64][P2][0.0]>
-                <[float64][P3][0.0]>
             >
             <[output_free][ServoRudderOutput][]
                 <[string8][Input][ServoRudder.Output]>
@@ -683,7 +673,7 @@
                 <[float64][ClAlpha][6.28]>
                 <[float64][CdAlpha][0.4]>
                 <[float64][CmAlpha][0.0]>
-                <[float64][ClFlap][1.5]>
+                <[float64][ClFlap][2.1]>
                 <[float64][CdFlap][0.2]>
                 <[float64][CmFlap][-0.2]>
                 <[float64][Cd0Base][0.005]>
