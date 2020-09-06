@@ -621,6 +621,9 @@
                 <[float64][Limit][0.016]>
                 <[float64][Damping][4.0]>
             >
+            <[output][BalanceIndicatorDeflection][]
+                <[string8][Input][BalanceIndicator.Output]>
+            >			
             <[output][AltimeterNeedle][]
                 <[string8][Input][Altimeter.PressureAltitude]>
             >
@@ -1335,10 +1338,15 @@
                 <[tmvector3d][Axis][1.0 0.0 0.0]>
                 <[tmvector3d][Pivot][1.240 -0.035 -0.158]>
             >
-            <[rigidbodygraphics][BalanceIndicatorBall][]
+            <[hingedbodygraphics][BalanceIndicatorBall][]
+                <[uint32][PositionID][Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
                 <[string8][GeometryList][ Ball ]>
-                <[uint32][PositionID][BalanceIndicatorBall.R]>
-            >
+                <[tmvector3d][Axis][ -1.0 0.0 0.0 ]>
+                <[tmvector3d][Pivot][ 1.244 -0.035 0.1140 ]>
+                <[float64][AngleMax][0.17]>
+                <[string8][AngleID][BalanceIndicatorDeflection.Output]>
+            >			
             <[hingedbodygraphics][57mm_fsg2t_VOL][]
                 <[string8][GeometryList][ VOL VOL01 ]>
                 <[uint32][PositionID][Fuselage.R]>
@@ -1450,7 +1458,7 @@
                 <[string8][InputPitch][1.0]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][VelocityID][Fuselage.V]>
-                <[string8][SoundFile][airbrake2.wav]>
+                <[string8][SoundFile][airbrakes2.wav]>
                 <[float64][Threshold][0.01]>
                 <[uint32][Direction][1]>
                 <[bool][External][false]>
@@ -1498,7 +1506,7 @@
                 <[string8][InputPitch][1.0]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][VelocityID][Fuselage.V]>
-                <[string8][SoundFile][airbrake2.wav]>
+                <[string8][SoundFile][airbrakes2.wav]>
                 <[bool][External][false]>
             >
             <[soundinput][SideSlip][]
