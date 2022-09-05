@@ -1,0 +1,31 @@
+<[file][][]
+    <[modelmanager][][]
+        <[pointer_list_tmuniverse][DynamicObjects][]
+
+            // gear down
+            <[input_lever][GearLever][]
+                <[float64][Value][1.0]>
+            >
+            <[servolinear][GearSequence][]
+                <[float64][Position][1.0]>
+            >
+
+            // water release
+            <[input_lever][BallastReleaseLever][]
+                <[float64][Value][1.0]>
+            >
+            <[event_edge_rising][BallastReleaseLever_Sound][]
+                <[float64][Value][1.0]>
+            >
+            <[event_edge_falling][BallastReleaseLever_Sound1][]
+                <[float64][Value][1.0]>
+            >
+
+            // trim down
+//            <[input_force_trim][ElevatorInput][]
+//                <[float64][TrimValue][-0.15]>
+//            >
+
+        >
+    >
+>

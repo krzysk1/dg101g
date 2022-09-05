@@ -1,15 +1,15 @@
 # dg101g
 The DG-100 of 1974 is the first sailplane manufactured by Glaser-Dirks, developed from the Akaflieg Darmstadt D-38, the Standard class sailplane was designed by Wilhelm Dirks. Some DG-101 sailplanes were constructed by ELAN in Slovenia and are designed with a "G" suffix.
 		
-Converted from FlightGear by Krzysztof Kaniewski. January, 2015 
+Converted from FlightGear by Krzysztof Kaniewski. January, 2015; September 2022 (AFS4)
 Original 3D design by Nikolaus Kerner. https://github.com/FGMEMBERS/DG-101G
 
-Some features may not work as intended and this aircraft could crash your Aerofly FS2. Use it at your own risk!
+Some features may not work as intended and this aircraft could crash your Aerofly FS4. Use it at your own risk!
 
 ------------------------------------------------------------
 Installation:
 
-1. Unzip file and move the folder "dg101g" to C:\Users\~\Documents\Aerofly FS2\aircraft .
+1. Unzip file and move the folder "dg101g" to C:\Users\~\Documents\Aerofly FS4\aircraft .
 
 
 ------------------------------------------------------------
@@ -29,4 +29,4 @@ To do list (optional in parentheses):
 - (radio animation);
 - (canopy animation);
 - (head animation).
-controls.tmc settings
+- controls.tmc settings

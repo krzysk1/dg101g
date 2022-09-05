@@ -1,0 +1,54 @@
+<[file][][]
+    <[modelmanager][][]
+        <[pointer_list_tmuniverse][DynamicObjects][]
+
+            // gear down
+            <[input_lever][GearLever][]
+                <[float64][Value][1.0]>
+            >
+            <[servolinear][GearSequence][]
+                <[float64][Position][1.0]>
+            >
+            <[multibody_joint][JointFuselageGear][]
+                <[float64][Value][1.29747367293198]>
+            >
+            <[event_edge_rising][GearLeverSoundUnlockRear][]
+                <[float64][Value][0.0]>
+            >
+            <[event_edge_falling][GearLeverSoundUnlockFront][]
+                <[float64][Value][0.0]>
+            >
+            <[event_edge_falling][GearLeverSoundLockFront][]
+                <[float64][Value][0.0]>
+            >
+            <[event_edge_rising][GearLeverSoundLockRear][]
+                <[float64][Value][0.0]>
+            >
+            <[event_edge_rising][GearSound0][]
+                <[float64][Value][0.0]>
+            >
+            <[event_edge_falling][GearSound1][]
+                <[float64][Value][0.0]>
+            >
+
+            // electrics
+
+            <[electrical_switch][BatteryToCOMContactor][]
+                <[float64][Value][0.0]>
+            >
+            <[electrical_switch][BatteryToAvionicsContactor][]
+                <[float64][Value][0.0]>
+            >
+            <[input_discrete][COMPowerSourceKnob][]
+                <[float64][Value][0.0]>
+            >
+            <[input_discrete][AvionicsPowerSourceKnob][]
+                <[float64][Value][0.0]>
+            >
+            <[input_default][COM1Volume][]
+                <[float64][Value][0.0]>
+            >
+
+        >
+    >
+>

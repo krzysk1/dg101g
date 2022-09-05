@@ -1,0 +1,31 @@
+<[file][][]
+    <[modelmanager][][]
+        <[pointer_list_tmuniverse][DynamicObjects][]
+
+            // flaps 5
+            <[input_lever][FlapsInput][]
+                <[float64][Value][0.667]>
+            >
+            <[servoclassic][LeftFlap][]
+                <[float64][Position][0.3491]>
+            >
+            <[servoclassic][RightFlap][]
+                <[float64][Position][0.3491]>
+            >
+
+            // gear down
+            <[input_lever][GearLever][]
+                <[float64][Value][1.0]>
+            >
+            <[servolinear][GearSequence][]
+                <[float64][Position][1.0]>
+            >
+
+            // trim neutral
+//            <[input_force_trim][ElevatorInput][]
+//                <[float64][TrimValue][0.0]>
+//            >
+
+        >
+    >
+>

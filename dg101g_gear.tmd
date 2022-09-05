@@ -1,0 +1,71 @@
+<[file][up][]
+    <[modelmanager][][]
+        <[pointer_list_tmuniverse][DynamicObjects][]
+
+            // gear up
+            <[input_lever][GearLever][]
+                <[float64][Value][0.0]>
+            >
+            <[servolinear][GearSequence][]
+                <[float64][Position][0.0]>
+            >
+            <[multibody_joint][JointFuselageGear][]
+                <[float64][Value][1.29747367293198]>
+            >
+            <[event_edge_rising][GearLeverSoundUnlockRear][]
+                <[float64][Value][0.0]>
+            >
+            <[event_edge_falling][GearLeverSoundUnlockFront][]
+                <[float64][Value][0.0]>
+            >
+            <[event_edge_falling][GearLeverSoundLockFront][]
+                <[float64][Value][0.0]>
+            >
+            <[event_edge_rising][GearLeverSoundLockRear][]
+                <[float64][Value][0.0]>
+            >
+            <[event_edge_rising][GearSound0][]
+                <[float64][Value][0.0]>
+            >
+            <[event_edge_falling][GearSound1][]
+                <[float64][Value][0.0]>
+            >
+        >
+    >
+>
+<[file][down][]
+    <[modelmanager][][]
+        <[pointer_list_tmuniverse][DynamicObjects][]
+
+            // gear down
+            <[input_lever][GearLever][]
+                <[float64][Value][1.0]>
+            >
+            <[servolinear][GearSequence][]
+                <[float64][Position][1.0]>
+            >
+            <[multibody_joint][JointFuselageGear][]
+                <[float64][Value][0.0]>
+            >
+            <[event_edge_rising][GearLeverSoundUnlockRear][]
+                <[float64][Value][1.0]>
+            >
+            <[event_edge_falling][GearLeverSoundUnlockFront][]
+                <[float64][Value][1.0]>
+            >
+            <[event_edge_falling][GearLeverSoundLockFront][]
+                <[float64][Value][1.0]>
+            >
+            <[event_edge_rising][GearLeverSoundLockRear][]
+                <[float64][Value][1.0]>
+            >
+            <[event_edge_rising][GearSound0][]
+                <[float64][Value][1.0]>
+            >
+            <[event_edge_falling][GearSound1][]
+                <[float64][Value][1.0]>
+            >
+        >
+    >
+>
+
