@@ -1,10 +1,10 @@
 <[file][][]
 
 	//-------------------------------------
-	// Plane: DG-101G
+	// Glider DG-101G
 	// Converted from FlightGear by krzysk(at)wp.pl
 	// 3D Design by Nikolaus Kerner
-	// Date: Fri Jan 09 2015; Apr 2019; Aug 2020; Sep 2022
+	// Date: Jan 2015; Apr 2019; Aug 2020; Sep 2022
 	//-------------------------------------
 
     <[modelmanager][][]
@@ -468,6 +468,16 @@
             <[sender][SenderMach][]
                 <[string8][Input][PitotTube.MachNumber]>
                 <[string8][Message][Aircraft.MachNumber]>
+            >
+            <[sender][SenderAngleOfAttackLimitMaximum][]
+                <[string8][Input][0.157]>
+                <[string8][Message][Aircraft.AngleOfAttackLimit]>
+                <[string8][Qualifiers][ maximum ]>
+            >
+            <[sender][SenderAngleOfAttackLimitMinimum][]
+                <[string8][Input][-0.1221]>
+                <[string8][Message][Aircraft.AngleOfAttackLimit]>
+                <[string8][Qualifiers][ minimum ]>
             >
             <[altimeter][Altimeter][]
                 <[string8][StaticPressure][PitotTube.StaticPressure]>
@@ -1089,8 +1099,14 @@
                 <[tmvector3d][Axis][ -0.0 -0.0 1.0 ]>                <[tmvector3d][Pivot][1.019 -0.252 -0.16]>
                 <[float64][Scaling][1.570796]>
             >
-            <[rigidbodygraphics][Pilot][]
-                <[string8][GeometryList][ PilotFoot PilotHand PilotHat PilotHead0 PilotHead1 PilotHead2 PilotHead3 PilotHairs PilotShoe PilotSweater PilotTrousers ]>
+            <[rigidbodygraphics][PilotBody][]
+                <[string8][GeometryList][ PilotFoot PilotHand PilotShoe PilotSweater PilotTrousers ]>
+                <[uint32][PositionID][Fuselage.R]>
+                <[uint32][OrientationID][Fuselage.Q]>
+       //         <[uint32][ShowInside][255]>
+            >
+            <[rigidbodygraphics][PilotHead][]
+                <[string8][GeometryList][ PilotHat PilotHead0 PilotHead1 PilotHead2 PilotHead3 PilotHairs ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[uint32][ShowInside][255]>

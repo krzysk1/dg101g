@@ -1,5 +1,5 @@
 <[file][][]    <[object][][]
-        <[int][Version][220]>        <[vec32array][ContactSpheres][ (0.164 0.0 -0.52 0.174) (-4.12 0.0 -0.09 0.099) (-0.036 7.492 0.42405 0.030) (-0.036 -7.492 0.424 0.030) ]>
+        <[int][Version][220]>        <[vec32array][ContactSpheres][ (0.164 0.0 -0.52 0.174) (-4.12 0.0 -0.09 0.099) (-0.036 7.492 0.424 0.030) (-0.036 -7.492 0.424 0.030) ]>
         <[string8][ICAO][]>        <[string8][DisplayName][DG-101G]>
         <[string8][DisplayNameFull][Glaser-Dirks DG-101G]>
         <[localized_text_list][Descriptions][]            <[localized_text][][]                <[string8][Language][en]>                <[string8][Text][The DG-100 of 1974 is the first sailplane manufactured by Glaser-Dirks, developed from the Akaflieg Darmstadt D-38, the Standard class sailplane was designed by Wilhelm Dirks. Converted from FlightGear by Krzysztof Kaniewski. Original 3D design by Nikolaus Kerner.]>            >        >		<[float64][WingSpan][15.0]>
