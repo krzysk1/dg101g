@@ -488,7 +488,7 @@
                 <[string8][Message][Aircraft.Altitude]>
             >
             <[input_default][PressureSettingInput][]
-                <[string8][Message][PressureSetting]>
+                <[string8][Message][Controls.PressureSetting0]>
                 <[uint][Positions][201]>
                 <[tmvector2d][Range][ 95000.0 105000.0]>
                 <[float64][Value][101325.0]>
@@ -959,8 +959,7 @@
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[uint32][InputID][ServoAirBrakePhysical.Output]>
                 <[tmvector3d][Axis][0.991217 -0.029737 -0.128858 ]>
-                <[float64][Scaling][-0.17]>
-//                 <[float64][Pos1][-0.17]>
+                <[float64][Scaling][0.17]>
             >
             <[graphics_input][AirBrakeInput][]
                 <[uint32][InputID][ServoAirBrakePhysical.Output]>
@@ -998,7 +997,6 @@
                 <[uint32][InputID][ServoElevatorTrim.Output]>
                 <[tmvector3d][Axis][0.995037 -0.099504 0.0 ]>
                 <[float64][Scaling][-0.12]>
-//                 <[float64][Pos1][-0.12]>
             >
             <[movinggraphics][GearLeverDummy][]
                 <[string8][GeometryList][ 29stickGeardummy ]> 
@@ -1007,7 +1005,6 @@
                 <[uint32][InputID][ServoGearAirbrake.Output]>
                 <[tmvector3d][Axis][0.995037 -0.099504 0.0]>
                 <[float64][Scaling][-0.2]>
-//                 <[float64][Pos1][-0.2]>
             >
 				
             <[graphics_input][DG-101G_29stick_gearInput][]
@@ -1088,8 +1085,7 @@
                 <[uint32][OrientationID][Fuselage.Q]>
                 <[uint32][InputID][HookRelease.Output]>
                 <[tmvector3d][Axis][0.995037 0.0 0.099504 ]>
-                <[float64][Scaling][-0.0500]>
-//                 <[float64][Pos1][-0.050]>
+                <[float64][Scaling][-0.05]>
             >
             <[hingedbodygraphics][BallastValve][]
                 <[string8][GeometryList][ 31ballastValve ]>
@@ -1103,13 +1099,13 @@
                 <[string8][GeometryList][ PilotFoot PilotHand PilotShoe PilotSweater PilotTrousers ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-       //         <[uint32][ShowInside][255]>
+                <[uint32][ShowInside][none]>
             >
             <[rigidbodygraphics][PilotHead][]
                 <[string8][GeometryList][ PilotHat PilotHead0 PilotHead1 PilotHead2 PilotHead3 PilotHairs ]>
                 <[uint32][PositionID][Fuselage.R]>
                 <[uint32][OrientationID][Fuselage.Q]>
-                <[uint32][ShowInside][255]>
+                <[uint32][ShowInside][none]>
             >			
             <[rigidbodygraphics][Panel][]
                 <[stRing8][GeometryList][ Backplane Body Ring
