@@ -284,6 +284,11 @@
                 <[string8][Input][ElevatorTrimInput.Output]>
                 <[string8][Message][Aircraft.Trim]>
             >
+            <[sender][SenderPitchTrimPosition][]
+                <[string8][Input][ElevatorTrimInput.Output]>
+                <[string8][Message][Aircraft.PitchTrim]>
+                <[string8][Qualifiers][ normalized ]>
+            >			
             <[output_free][ElevatorTrimInputOutput][]
                 <[string8][Input][ElevatorTrimInput.Output]>
             >
