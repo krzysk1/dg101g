@@ -1,12 +1,27 @@
-<[file][][]    <[object][][]
-        <[int][Version][220]>        <[vec32array][ContactSpheres][ (0.164 0.0 -0.52 0.174) (-4.12 0.0 -0.09 0.099) (-0.036 7.492 0.424 0.030) (-0.036 -7.492 0.424 0.030) ]>
-        <[string8][ICAO][]>        <[string8][DisplayName][DG-101G]>
+<[file][][]
+    <[object][][]
+        <[int][Version][220]>
+        <[vec32array][ContactSpheres][ (0.164 0.0 -0.52 0.174) (-4.12 0.0 -0.09 0.099) (-0.036 7.492 0.424 0.030) (-0.036 -7.492 0.424 0.030) ]>
+        <[string8][ICAO][]>
+        <[string8][DisplayName][DG-101G]>
         <[string8][DisplayNameFull][Glaser-Dirks DG-101G]>
-        <[localized_text_list][Descriptions][]            <[localized_text][][]                <[string8][Language][en]>                <[string8][Text][The DG-100 of 1974 is the first sailplane manufactured by Glaser-Dirks, developed from the Akaflieg Darmstadt D-38, the Standard class sailplane was designed by Wilhelm Dirks. Converted from FlightGear by Krzysztof Kaniewski. Original 3D design by Nikolaus Kerner.]>            >            <[localized_text][][]                <[string8][Language][de]>                <[string8][Text][Die Glaser-Dirks DG-100 war der erste Segelflugzeugtyp, den der Segelflugzeughersteller Glaser-Dirks (heute: DG Flugzeugbau) ab 1973 entwarf und der am 10. Mai 1974 seinen Erstflug hatte.  Konvertiert von FlightGear durch Krzysztof Kaniewski. 3d-Modell erstellt von Nikolaus Kerner.]>			>			        >		<[float64][WingSpan][15.0]>
-		<[float64][MaximumAirspeed][70.0]>		<[float64][MaximumSpeed][70.0]>				
+        <[localized_text_list][Descriptions][]
+            <[localized_text][][]
+                <[string8][Language][en]>
+                <[string8][Text][The DG-100 of 1974 is the first sailplane manufactured by Glaser-Dirks, developed from the Akaflieg Darmstadt D-38, the Standard class sailplane was designed by Wilhelm Dirks. Converted from FlightGear by Krzysztof Kaniewski. Original 3D design by Nikolaus Kerner.]>
+            >
+            <[localized_text][][]
+                <[string8][Language][de]>
+                <[string8][Text][Die Glaser-Dirks DG-100 war der erste Segelflugzeugtyp, den der Segelflugzeughersteller Glaser-Dirks (heute: DG Flugzeugbau) ab 1973 entwarf und der am 10. Mai 1974 seinen Erstflug hatte.  Konvertiert von FlightGear durch Krzysztof Kaniewski. 3d-Modell erstellt von Nikolaus Kerner.]>
+			>
+        >
+		<[float64][WingSpan][15.0]>
+		<[float64][MaximumAirspeed][70.0]>
+		<[float64][MaximumSpeed][70.0]>
 		<[float64][MinimumAirspeed][17.5]>
         <[float64][ApproachAirspeed][33.3]>
-        <[float64][CruiseAirspeed]  [55.6]>        <[float64][CruiseSpeed][75.0]>			
+        <[float64][CruiseAirspeed]  [55.6]>
+        <[float64][CruiseSpeed][75.0]>
 		<[tmvector2d][NormalAirspeedRange][ 17.5 49.5 ]>
 		<[tmvector2d][CautionAirspeedRange][ 49.5 70.0 ]>
 		<[tmvector2d][FlapAirspeedRange][ 0.0 0.0 ]>
@@ -16,7 +31,9 @@
         <[float64][MaximumRange][0.0]>
         <[float64][MaximumGlideRatio][39.2]>
         <[uint][UnitsBuilt][327]>
-        <[uint][EngineCount][0]>        <[uint][Year][1974]>
-        <[string8][Tags][ airplane glider winch_hook tow_hook tailgear retractable_gear ]>		<[string8][Pilot][]>
+        <[uint][EngineCount][0]>
+        <[uint][Year][1974]>
+        <[string8][Tags][ airplane glider winch_hook tow_hook tailgear retractable_gear ]>
+		<[string8][Pilot][]>
     >
 >
