@@ -4,16 +4,18 @@ The DG-100 of 1974 is the first sailplane manufactured by Glaser-Dirks, develope
 Converted from FlightGear by Krzysztof Kaniewski. January, 2015; September 2022 (AFS4)
 Original 3D design by Nikolaus Kerner. https://github.com/FGMEMBERS/DG-101G
 
-Some features may not work as intended and this aircraft could crash your Aerofly FS4. Use it at your own risk!
+ Some features may not work as intended and this aircraft could crash your Aerofly FS4. 
+ Use it at your own risk!
 
-------------------------------------------------------------
-Installation:
+# Installation:
 
-1. Unzip file and move the folder "dg101g" to C:\Users\~\Documents\Aerofly FS4\aircraft .
+1. Unzip file and move the folder "dg101g" into the C:\Users\~\Documents\Aerofly FS 4\aircraft folder .
 
+# Uninstall
 
-------------------------------------------------------------
-Some useful features:
+1. Delete the folder "dg101g".
+
+# Tips
 
 There are 2 extra liveries: d-0815 & d-4711
 
