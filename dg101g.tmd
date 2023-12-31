@@ -5,7 +5,7 @@
 	// Converted from FlightGear by krzysk(at)wp.pl
 	// 3D Design by Nikolaus Kerner
 	// License GPLv2+
-	// Date: Jan 2015; Apr 2019; Aug 2020; Sep 2022
+	// Date: Jan 2015; Apr 2019; Aug 2020; Sep 2022; May 2023
 	//-------------------------------------
 
     <[modelmanager][][]
@@ -130,25 +130,28 @@
                 <[float64][K][400000.0]>
                 <[float64][D][8200.0]>
                 <[string8][Body][Fuselage]>
-                <[stRing8][Geometry][01Fuselage]>
+                <[string8][Geometry][01Fuselage]>
             >
             <[collisionhull][CollisionLeftWing][]
                 <[float64][K][500000.0]>
                 <[float64][D][3200.0]>
                 <[string8][Body][LeftWing]>
-                <[stRing8][Geometry][03WingL]>
+                <[string8][Geometry][03WingL]>
+                <[bool][NoCrash][true]>
             >
             <[collisionhull][CollisionRightWing][]
                 <[float64][K][500000.0]>
                 <[float64][D][3200.0]>
                 <[string8][Body][RightWing]>
-                <[stRing8][Geometry][04WingR]>
+                <[string8][Geometry][04WingR]>
+                <[bool][NoCrash][true]>
             >
             <[collisionhull][CollisionStabilizer][]
                 <[float64][K][100000.0]>
                 <[float64][D][480.0]>
                 <[string8][Body][Stabilizer]>
-                <[stRing8][Geometry][12ElevatorFix]>
+                <[string8][Geometry][12ElevatorFix]>
+                <[bool][InstantCrash][true]>
             >
             <[wheel][MainWheelHull][]
                 <[float64][K][400000.0]>
