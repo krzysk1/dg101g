@@ -33,7 +33,7 @@
         <[uint][UnitsBuilt][327]>
         <[uint][EngineCount][0]>
         <[uint][Year][1974]>
-        <[string8][Tags][ airplane glider winch_hook tow_hook tailgear retractable_gear ]>
+        <[string8][Tags][ airplane glider aerobatic retractable_gear winch_hook tow_hook ]>
 		<[string8][Pilot][]>
     >
 >
