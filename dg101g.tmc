@@ -2,42 +2,40 @@
     <[modelinformation][][]
         <[int32][Version][220]>
         <[list_vector4_float64][ContactSpheres][ (0.164 0.0 -0.52 0.174) (-4.12 0.0 -0.09 0.099) (-0.036 7.492 0.424 0.030) (-0.036 -7.492 0.424 0.030) ]>
-        <[stringt8c][ICAO][]>
+        <[stringt8c][ICAO][DG10]>
         <[string8][DisplayName][DG-101G]>
         <[string8][DisplayNameFull][Glaser-Dirks DG-101G]>
         <[list_localized_text][Descriptions][]
             <[localized_text][element][0]
-                <[string8][Language][en]>
+                <[string8u][Language][en]>
                 <[string8][Text][The DG-100 of 1974 is the first sailplane manufactured by Glaser-Dirks, developed from the Akaflieg Darmstadt D-38, the Standard class sailplane was designed by Wilhelm Dirks. Converted from FlightGear by Krzysztof Kaniewski. Original 3D design by Nikolaus Kerner.]>
             >
             <[localized_text][element][1]
-                <[string8][Language][de]>
+                <[string8u][Language][de]>
                 <[string8][Text][Die Glaser-Dirks DG-100 war der erste Segelflugzeugtyp, den der Segelflugzeughersteller Glaser-Dirks (heute: DG Flugzeugbau) ab 1973 entwarf und der am 10. Mai 1974 seinen Erstflug hatte.  Konvertiert von FlightGear durch Krzysztof Kaniewski. 3d-Modell erstellt von Nikolaus Kerner.]>
 			>
             <[localized_text][element][2]
-                <[string8][Language][pl]>
+                <[string8u][Language][pl]>
                 <[string8][Text][DG-100 z 1974 roku to pierwszy szybowiec wyprodukowany przez Glaser-Dirks, opracowany na bazie Akaflieg Darmstadt D-38, szybowiec klasy Standard został zaprojektowany przez Wilhelma Dirksa. Przerobiony z FlightGear przez Krzysztofa Kaniewskiego. Oryginalny projekt 3D autorstwa Nikolausa Kernera.]>
 			>
         >
-		<[float64][WingSpan][15.0]>
-		<[float64][MaximumAirspeed][70.0]>
-		<[float64][MaximumSpeed][70.0]>
-		<[float64][MinimumAirspeed][17.5]>
-        <[float64][ApproachAirspeed][33.3]>
-        <[float64][CruiseAirspeed]  [55.6]>
-        <[float64][CruiseSpeed][75.0]>
-		<[tmvector2d][NormalAirspeedRange][ 17.5 49.5 ]>
-		<[tmvector2d][CautionAirspeedRange][ 49.5 70.0 ]>
-		<[tmvector2d][FlapAirspeedRange][ 0.0 0.0 ]>
-        <[float64][MaximumAltitude][4715.0]>
-        <[float64][CruiseAltitude] [1826.0]>
         <[float64][MaximumTakeoffMass][418.0]>
-        <[float64][MaximumRange][0.0]>
-        <[float64][MaximumGlideRatio][39.2]>
-        <[uint][UnitsBuilt][327]>
-        <[uint][EngineCount][0]>
-        <[uint][Year][1974]>
-        <[string8][Tags][ airplane glider aerobatic retractable_gear winch_hook tow_hook ]>
+        <[float64][WingSpan]          [15.0]>
+        <[uint32] [Year]              [1974]>
+        <[uint32] [UnitsBuilt]        [327]>
+        <[uint32] [EngineCount]       [0]>
+        <[float64][MinimumAirspeed]   [17.5]>
+        <[float64][ApproachAirspeed]  [33.3]>
+        <[float64][CruiseAirspeed]    [55.6]>
+        <[float64][CruiseAltitude]    [1826.0]>
+        <[float64][CruiseSpeed]       [75.0]>
+        <[float64][MaximumAirspeed]   [70.0]>
+        <[float64][MaximumAltitude]   [4715.0]>
+        <[float64][MaximumSpeed]      [70.0]>
+        <[float64][MaximumGlideRatio] [39.2]>
+		<[vector2_float64][NormalAirspeedRange] [ 17.5 49.5 ]>
+		<[vector2_float64][CautionAirspeedRange][ 49.5 70.0 ]>
+        <[string8][Tags][ airplane glider aerobatic retractable_gear tailgear winch_hook tow_hook ]>
 		<[string8][Pilot][]>
     >
 >
