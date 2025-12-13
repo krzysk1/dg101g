@@ -31,9 +31,3 @@
         <[float64][GainSideSlipRoll][1.5]>
     >
 >
-
-       43.00-tmsyssound_sl:           ERROR:  (sound file 'sound/glider_gear.tsb' not found)
-       43.00-tmsyssound_sl:           ERROR:  (sound file 'sound/glider_gear_up.tsb' not found)
-       43.00-tmsyssound_sl:           ERROR:  (sound file 'sound/glider_gear_down.tsb' not found)
-       43.00-tmsyssound_sl:           ERROR:  (sound file 'sound/gear_warning.tsb' not found)
-       43.00-tmsyssound_sl:           ERROR:  (sound file 'sound/glider_sideslip.tsb' not found)
