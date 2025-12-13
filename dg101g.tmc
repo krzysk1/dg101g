@@ -1,6 +1,6 @@
 <[file][][]
     <[modelinformation][][]
-        <[int32][Version][220]>
+        <[int32][Version][230]>
         <[list_vector4_float64][ContactSpheres][ (0.164 0.0 -0.52 0.174) (-4.12 0.0 -0.09 0.099) (-0.036 7.492 0.424 0.030) (-0.036 -7.492 0.424 0.030) ]>
         <[stringt8c][ICAO][DG10]>
         <[string8][DisplayName][DG-101G]>
@@ -13,29 +13,63 @@
             <[localized_text][element][1]
                 <[string8u][Language][de]>
                 <[string8][Text][Die Glaser-Dirks DG-100 war der erste Segelflugzeugtyp, den der Segelflugzeughersteller Glaser-Dirks (heute: DG Flugzeugbau) ab 1973 entwarf und der am 10. Mai 1974 seinen Erstflug hatte.  Konvertiert von FlightGear durch Krzysztof Kaniewski. 3d-Modell erstellt von Nikolaus Kerner.]>
-			>
+            >
             <[localized_text][element][2]
+                <[string8u][Language][fr]>
+                <[string8][Text][Le DG-100 de 1974 est le premier planeur fabriqué par Glaser-Dirks, développé à partir de l'Akaflieg Darmstadt D-38. Ce planeur de classe Standard a été conçu par Wilhelm Dirks. Converti à partir de FlightGear par Krzysztof Kaniewski. Conception 3D originale par Nikolaus Kerner.]>
+            >
+            <[localized_text][element][3]
+                <[string8u][Language][es]>
+                <[string8][Text][El DG-100 de 1974 es el primer planeador fabricado por Glaser-Dirks, desarrollado a partir del Akaflieg Darmstadt D-38. El planeador de clase estándar fue diseñado por Wilhelm Dirks. Convertido desde FlightGear por Krzysztof Kaniewski. Diseño 3D original de Nikolaus Kerner.]>
+            >
+            <[localized_text][element][4]
+                <[string8u][Language][it]>
+                <[string8][Text][Il DG-100 del 1974 è il primo aliante prodotto dalla Glaser-Dirks, sviluppato dall'Akaflieg Darmstadt D-38. L'aliante di classe Standard è stato progettato da Wilhelm Dirks. Convertito da FlightGear da Krzysztof Kaniewski. Progetto 3D originale di Nikolaus Kerner.]>
+            >
+            <[localized_text][element][5]
                 <[string8u][Language][pl]>
                 <[string8][Text][DG-100 z 1974 roku to pierwszy szybowiec wyprodukowany przez Glaser-Dirks, opracowany na bazie Akaflieg Darmstadt D-38, szybowiec klasy Standard został zaprojektowany przez Wilhelma Dirksa. Przerobiony z FlightGear przez Krzysztofa Kaniewskiego. Oryginalny projekt 3D autorstwa Nikolausa Kernera.]>
-			>
+            >
         >
-        <[float64][MaximumTakeoffMass][418.0]>
-        <[float64][WingSpan]          [15.0]>
-        <[uint32] [Year]              [1974]>
-        <[uint32] [UnitsBuilt]        [327]>
-        <[uint32] [EngineCount]       [0]>
-        <[float64][MinimumAirspeed]   [17.5]>
-        <[float64][ApproachAirspeed]  [33.3]>
-        <[float64][CruiseAirspeed]    [55.6]>
-        <[float64][CruiseAltitude]    [1826.0]>
-        <[float64][CruiseSpeed]       [75.0]>
-        <[float64][MaximumAirspeed]   [70.0]>
-        <[float64][MaximumAltitude]   [4715.0]>
-        <[float64][MaximumSpeed]      [70.0]>
-        <[float64][MaximumGlideRatio] [39.2]>
-		<[vector2_float64][NormalAirspeedRange] [ 17.5 49.5 ]>
-		<[vector2_float64][CautionAirspeedRange][ 49.5 70.0 ]>
+        <[float64][MaximumTakeoffMass]   [418.0]>
+        <[float64][MaximumTaxiMass]      [418.0]> 
+        <[float64][MaximumTakeoffMass]   [418.0]>
+        <[float64][MaximumLandingMass]   [385.0]>
+        <[float64][MaximumZeroFuelMass]  [385.0]>
+        <[float64][OperatingEmptyMass]   [230.0]>
+        <[float64][MaximumFuelMass]      [80.0]>
+        <[float64][MaximumPayload]       [140.0]>
+        <[uint32] [MaximumPersonsOnBoard][1]>
+        <[float64][WingSpan]             [15.0]>
+        <[float64][WingArea]             [11.0]>
+        <[float64][Length]               [7.0]>
+        <[float64][Height]               [1.4]>
+        <[uint32] [Year]                 [1974]>
+        <[uint32] [UnitsBuilt]           [327]>
+        <[uint32] [EngineCount]          [0]>
+        <[float64][MinimumAirspeed]      [18.1]> // 67 km/h
+        <[float64][ApproachAirspeed]     [33.3]>
+        <[float64][CruiseAirspeed]       [55.6]> // Pr. ekonomiczna 74 km/h Pr. optymalna 96 km/h
+        <[float64][CruiseAltitude]       [1826.0]>
+        <[float64][CruiseSpeed]          [55.6]>
+        <[float64][MaximumAirspeed]      [70.2]>
+        <[float64][MaximumAltitude]      [4715.0]>
+        <[float64][MaximumSpeed]         [70.2]>
+        <[float64][MaximumRange]         [0.0]>
+        <[float64][MaximumLoadRange]     [0.0]>
+        <[float64][MaximumFuelRange]     [0.0]>
+        <[float64][MaximumFerryRange]    [0.0]>
+        <[float64][MaximumGlideRatio]    [39.0]>
+        <[float64][TakeoffDistance]      [250.0]>
+        <[float64][LandingDistance]      [200.0]>
+        <[float64][MACLeadingEdge]       [0.284]>
+        <[float64][MACLength]            [0.750]>
+        <[float64][MACOptimumCG]         [0.503]>
+        <[float64][FuelDensity]          [1000.0]>
+        <[vector2_float64][FlapAirspeedRange]   [  0.0  0.0 ]>
+        <[vector2_float64][NormalAirspeedRange] [ 18.1 49.5 ]>
+        <[vector2_float64][CautionAirspeedRange][ 49.5 70.2 ]>
         <[string8][Tags][ airplane glider aerobatic retractable_gear tailgear winch_hook tow_hook ]>
-		<[string8][Pilot][]>
+        <[string8][Pilot][]>
     >
 >
